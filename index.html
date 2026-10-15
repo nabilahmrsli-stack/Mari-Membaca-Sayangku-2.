@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mari Membaca Sayangku | Jom Baca</title>
+<style>
+:root{font-family:Arial,'Noto Sans',sans-serif;color:#111;background:#eff9e9}*{box-sizing:border-box}body{margin:0}header{background:linear-gradient(115deg,#157c50,#59a43a);padding:22px 16px;text-align:center;color:white}h1{font-size:clamp(26px,5vw,42px);margin:0}header p{margin:7px 0 0}main{max-width:1050px;margin:18px auto;padding:0 14px 40px}.card{background:white;border-radius:22px;padding:clamp(16px,3vw,28px);box-shadow:0 8px 25px #235c2a18;margin:14px 0}.tabs{display:flex;gap:12px;flex-wrap:wrap}.tabs button{flex:1;min-width:160px}button,.link{border:0;border-radius:14px;padding:13px 17px;font-size:17px;font-weight:700;cursor:pointer;background:#e6f2de;color:#173d22}button[aria-selected=true],.primary{background:#176e45;color:white}.link{display:inline-block;text-decoration:none}.instructions{font-size:clamp(21px,3vw,29px);font-weight:800;text-align:center;margin:10px 0 20px}.sentences{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:13px}.sentence{font-size:clamp(20px,2.8vw,27px);font-weight:650;border:2px solid #d5e8ce;border-radius:15px;padding:17px;background:#fcfff9}.number{display:inline-grid;place-items:center;background:#e3f3d9;border-radius:50%;width:36px;height:36px;margin-right:8px}.story-title{font-size:clamp(22px,3.2vw,30px);font-weight:800;text-align:center;color:#157c50;margin-bottom:15px;background:#e3f3d9;padding:10px;border-radius:12px}.story{font-size:clamp(21px,3vw,28px);line-height:1.9;background:#fbfff9;border:2px solid #d5e8ce;border-radius:15px;padding:22px}.hidden{display:none!important}.rec{border-top:2px dashed #cbdcc3;margin-top:23px;padding-top:20px}.rec p{line-height:1.55}.stop{background:#b72835;color:white}.status{font-weight:bold;min-height:25px;margin-top:8px;color:#157c50}.preview{max-width:100%;max-height:330px;background:#111;border-radius:12px;margin-top:12px}.student-field{display:grid;gap:8px;margin:15px 0 18px;max-width:470px}.student-field label{font-size:18px;font-weight:800}.student-field input,.student-field select{padding:14px 16px;border:2px solid #9cc9a0;border-radius:12px;font-size:18px;color:#111}.record-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.record-option{border:2px solid #d5e8ce;border-radius:16px;padding:16px;background:#fafff7;text-align:center}.record-option button{width:100%;min-height:54px}.record-option h3{margin:0 0 10px;font-size:19px}.teacher-section{background:#f0f7ed;border:2px dashed #176e45;border-radius:16px;padding:20px;margin-top:25px}.teacher-section h3{color:#176e45;margin-top:0}.teacher-log-box{background:white;padding:12px;border-radius:10px;margin-top:10px;border:1px solid #cce0bd;font-size:15px}.page-footer-note{text-align:center;margin-top:30px;font-weight:bold;color:#157c50;background:#e3f3d9;padding:14px;border-radius:12px;font-size:18px}.table-container{overflow-x:auto;margin-top:15px}.btn-danger{background:#b72835;color:white;padding:8px 12px;font-size:14px;border-radius:8px}
+@media(max-width:560px){.record-columns{grid-template-columns:1fr}}footer{text-align:center;color:#355c3a;font-size:14px;padding:15px}button:focus-visible,a:focus-visible{outline:4px solid #f1ac21;outline-offset:3px}
+.reading-figure{margin:12px auto 22px;max-width:100%;text-align:center}.reading-figure img{display:block;width:100%;height:auto;border-radius:17px;border:2px solid #cfe6c3;box-shadow:0 5px 15px #235c2a18}
+</style>
+</head>
+<body>
+<header>
+  <h1>🌿 Mari Membaca Sayangku 🌿</h1>
+  <p>Jom membaca bersama-sama di hutan ceria!</p>
+</header>
+<main>
+  <section class="card">
+    <div class="tabs" role="tablist" aria-label="Pilihan bacaan">
+      <button id="tabAyat" role="tab" aria-selected="true" aria-controls="contentAyat">📖 Jom baca ayat!</button>
+      <button id="tabCerita" role="tab" aria-selected="false" aria-controls="contentCerita">📚 Jom baca cerita!</button>
+      <button id="tabSenarai" role="tab" aria-selected="false" aria-controls="contentSenarai">📋 Senarai Rekod</button>
+    </div>
+  </section>
+
+  <section class="card">
+    <!-- BAHAGIAN 1: JOM BACA AYAT! -->
+    <div id="contentAyat">
+      <div class="student-field">
+        <label for="namaMuridAyat">Nama Murid:</label>
+        <input type="text" id="namaMuridAyat" placeholder="Masukkan nama penuh...">
+      </div>
+      
+      <p class="instructions">Sila baca ayat tunggal di bawah.</p>
+<figure class="reading-figure"><img src="gambar-ayat.jpg" alt="Gambar A: Lima ayat tunggal dan haiwan di hutan" loading="lazy"></figure>
+      
+      <div class="sentences">
+        <div class="sentence"><span class="number">1</span> Ini sebuah hutan.</div>
+        <div class="sentence"><span class="number">2</span> Kancil minum air.</div>
+        <div class="sentence"><span class="number">3</span> Rusa makan rumput.</div>
+        <div class="sentence"><span class="number">4</span> Monyet duduk di atas pokok.</div>
+        <div class="sentence"><span class="number">5</span> Gajah mandi di sungai.</div>
+      </div>
+      
+      <div class="rec">
+        <p><strong>Rakaman Bacaan:</strong> Sila rakam suara atau video anda semasa membaca.</p>
+        <div class="record-columns">
+          <div class="record-option">
+            <h3>Rakam Audio</h3>
+            <button id="startAudioAyat" class="primary">Mula Rakam Audio</button>
+            <button id="stopAudioAyat" class="stop hidden">Henti & Simpan</button>
+            <p class="status" id="statusAudioAyat"></p>
+            <audio id="previewAudioAyat" class="preview hidden" controls></audio>
+          </div>
+          <div class="record-option">
+            <h3>Rakam Video</h3>
+            <button id="startVideoAyat" class="primary">Mula Rakam Video</button>
+            <button id="stopVideoAyat" class="stop hidden">Henti & Simpan</button>
+            <p class="status" id="statusVideoAyat"></p>
+            <video id="previewVideoAyat" class="preview hidden" controls></video>
+          </div>
+        </div>
+      </div>
+
+      <div class="teacher-section">
+        <h3>👩‍🏫 Bahagian Semakan & Rekod Guru</h3>
+        <div class="student-field">
+          <label for="namaGuruAyat">Nama Guru Penilai:</label>
+          <input type="text" id="namaGuruAyat" placeholder="Nama Cikgu / Guru...">
+        </div>
+        <div class="student-field">
+          <label for="statusSemakanAyat">Status Prestasi:</label>
+          <select id="statusSemakanAyat">
+            <option value="Cemerlang / Lancar">Cemerlang / Lancar</option>
+            <option value="Baik / Perlu Latihan Sikit">Baik / Perlu Latihan Sikit</option>
+            <option value="Perlu Bimbingan Lanjut">Perlu Bimbingan Lanjut</option>
+          </select>
+        </div>
+        <button id="simpanRekodAyat" class="primary">Simpan Rekod & Semakan Guru</button>
+        <div id="paparanRekodAyat" class="teacher-log-box hidden"></div>
+      </div>
+    </div>
+
+    <!-- BAHAGIAN 2: JOM BACA CERITA! -->
+    <div id="contentCerita" class="hidden">
+      <div class="student-field">
+        <label for="namaMuridCerita">Nama Murid:</label>
+        <input type="text" id="namaMuridCerita" placeholder="Masukkan nama penuh...">
+      </div>
+      
+      <figure class="reading-figure"><img src="gambar-cerita.jpg" alt="Gambar B: Petikan Haiwan di Hutan" loading="lazy"></figure>
+       <div class="story-title">Haiwan di Hutan</div>
+      <div class="story">
+        Ini sebuah hutan. Hutan ini sangat cantik. Terdapat pelbagai haiwan di hutan. Seekor kancil sedang minum air di sungai. Seekor rusa pula makan rumput. Monyet duduk di atas pokok. Gajah mandi di sungai. Semua haiwan hidup dengan gembira.
+      </div>
+      
+      <div class="rec">
+        <p><strong>Rakaman Cerita:</strong> Sila rakam suara atau video anda semasa membaca.</p>
+        <div class="record-columns">
+          <div class="record-option">
+            <h3>Rakam Audio</h3>
+            <button id="startAudioCerita" class="primary">Mula Rakam Audio</button>
+            <button id="stopAudioCerita" class="stop hidden">Henti & Simpan</button>
+            <p class="status" id="statusAudioCerita"></p>
+            <audio id="previewAudioCerita" class="preview hidden" controls></audio>
+          </div>
+          <div class="record-option">
+            <h3>Rakam Video</h3>
+            <button id="startVideoCerita" class="primary">Mula Rakam Video</button>
+            <button id="stopVideoCerita" class="stop hidden">Henti & Simpan</button>
+            <p class="status" id="statusVideoCerita"></p>
+            <video id="previewVideoCerita" class="preview hidden" controls></video>
+          </div>
+        </div>
+      </div>
+
+      <div class="teacher-section">
+        <h3>👩‍🏫 Bahagian Semakan & Rekod Guru</h3>
+        <div class="student-field">
+          <label for="namaGuruCerita">Nama Guru Penilai:</label>
+          <input type="text" id="namaGuruCerita" placeholder="Nama Cikgu / Guru...">
+        </div>
+        <div class="student-field">
+          <label for="statusSemakanCerita">Status Prestasi:</label>
+          <select id="statusSemakanCerita">
+            <option value="Cemerlang / Lancar">Cemerlang / Lancar</option>
+            <option value="Baik / Perlu Latihan Sikit">Baik / Perlu Latihan Sikit</option>
+            <option value="Perlu Bimbingan Lanjut">Perlu Bimbingan Lanjut</option>
+          </select>
+        </div>
+        <button id="simpanRekodCerita" class="primary">Simpan Rekod & Semakan Guru</button>
+        <div id="paparanRekodCerita" class="teacher-log-box hidden"></div>
+      </div>
+    </div>
+
+    <!-- BAHAGIAN 3: SENARAI REKOD KESELURUHAN -->
+    <div id="contentSenarai" class="hidden">
+      <h2 style="color:#157c50; margin-top:0;">📋 Senarai Keseluruhan Rekod Murid</h2>
+      <p>Berikut adalah senarai rekod bacaan dan semakan guru yang telah disimpan di dalam pelayar web ini:</p>
+      
+      <div class="table-container">
+        <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+          <thead>
+            <tr style="background:#e3f3d9; color:#173d22;">
+              <th style="border:1px solid #cce0bd; padding:12px;">Modul</th>
+              <th style="border:1px solid #cce0bd; padding:12px;">Nama Murid</th>
+              <th style="border:1px solid #cce0bd; padding:12px;">Nama Guru</th>
+              <th style="border:1px solid #cce0bd; padding:12px;">Status Prestasi</th>
+              <th style="border:1px solid #cce0bd; padding:12px;">Tarikh/Masa</th>
+              <th style="border:1px solid #cce0bd; padding:12px; text-align:center;">Tindakan</th>
+            </tr>
+          </thead>
+          <tbody id="senaraiRekodBody">
+            <!-- Senarai dimasukkan secara automatik -->
+          </tbody>
+        </table>
+      </div>
+      <div id="tiadaRekod" style="text-align:center; padding:30px; color:#555; font-style:italic;">Tiada rekod tersimpan lagi.</div>
+      <div style="margin-top:20px;">
+        <button id="padamSemuaBtn" class="btn-danger">Padam Semua Rekod</button>
+      </div>
+    </div>
+
+    <div class="page-footer-note">
+      Setelah selesai, sila kembali ke Modul Mari Membaca Sayangku
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; Mari Membaca Sayangku</p>
+</footer>
+
+<script>
+  // Navigasi Tab
+  const tabAyat = document.getElementById('tabAyat');
+  const tabCerita = document.getElementById('tabCerita');
+  const tabSenarai = document.getElementById('tabSenarai');
+  const contentAyat = document.getElementById('contentAyat');
+  const contentCerita = document.getElementById('contentCerita');
+  const contentSenarai = document.getElementById('contentSenarai');
+
+  function tukarTab(aktif) {
+    tabAyat.setAttribute('aria-selected', aktif === 'ayat');
+    tabCerita.setAttribute('aria-selected', aktif === 'cerita');
+    tabSenarai.setAttribute('aria-selected', aktif === 'senarai');
+    
+    contentAyat.classList.toggle('hidden', aktif !== 'ayat');
+    contentCerita.classList.toggle('hidden', aktif !== 'cerita');
+    contentSenarai.classList.toggle('hidden', aktif !== 'senarai');
+    
+    if(aktif === 'senarai') muatSenaraiRekod();
+  }
+
+  tabAyat.addEventListener('click', () => tukarTab('ayat'));
+  tabCerita.addEventListener('click', () => tukarTab('cerita'));
+  tabSenarai.addEventListener('click', () => tukarTab('senarai'));
+
+  // Logik Rakaman Media (Audio & Video)
+  function setupRecorder(type, section) {
+    const startBtn = document.getElementById(`start${type}${section}`);
+    const stopBtn = document.getElementById(`stop${type}${section}`);
+    const statusEl = document.getElementById(`status${type}${section}`);
+    const previewEl = document.getElementById(`preview${type}${section}`);
+
+    let mediaRecorder;
+    let recordedChunks = [];
+
+    startBtn.addEventListener('click', async () => {
+      recordedChunks = [];
+      try {
+        const constraints = type === 'Audio' ? { audio: true } : { audio: true, video: true };
+        const stream = await navigator.mediaDevices.getUserMedia(constraints);
+        
+        if(type === 'Video') {
+          previewEl.srcObject = stream;
+          previewEl.muted = true;
+          previewEl.play();
+          previewEl.classList.remove('hidden');
+        }
+
+        mediaRecorder = new MediaRecorder(stream);
+        
+        mediaRecorder.ondataavailable = (e) => {
+          if (e.data.size > 0) recordedChunks.push(e.data);
+        };
+
+        mediaRecorder.onstop = () => {
+          const blob = new Blob(recordedChunks, { type: type === 'Audio' ? 'audio/webm' : 'video/webm' });
+          const url = URL.createObjectURL(blob);
+          previewEl.srcObject = null;
+          previewEl.src = url;
+          previewEl.controls = true;
+          previewEl.classList.remove('hidden');
+          statusEl.textContent = "Rakaman berjaya disimpan!";
+          
+          // Hentikan strim perkakasan
+          stream.getTracks().forEach(track => track.stop());
+        };
+
+        mediaRecorder.start();
+        startBtn.classList.add('hidden');
+        stopBtn.classList.remove('hidden');
+        statusEl.textContent = "Sedang merakam...";
+      } catch (err) {
+        alert("Akses mikrofon/kamera tidak dibenarkan atau peranti tidak menyokong rakaman.");
+        console.error(err);
+      }
+    });
+
+    stopBtn.addEventListener('click', () => {
+      if(mediaRecorder && mediaRecorder.state !== 'inactive') {
+        mediaRecorder.stop();
+      }
+      stopBtn.classList.add('hidden');
+      startBtn.classList.remove('hidden');
+    });
+  }
+
+  // Aktifkan perakam untuk semua seksyen
+  setupRecorder('Audio', 'Ayat');
+  setupRecorder('Video', 'Ayat');
+  setupRecorder('Audio', 'Cerita');
+  setupRecorder('Video', 'Cerita');
+
+  // Fungsi Papar dan Kemaskini Senarai Rekod
+  function muatSenaraiRekod() {
+    const tbody = document.getElementById('senaraiRekodBody');
+    const divTiada = document.getElementById('tiadaRekod');
+    tbody.innerHTML = '';
+
+    const kunciModul = [
+      { key: 'rekod_guru_Ayat', namaModul: 'Jom Baca Ayat' },
+      { key: 'rekod_guru_Cerita', namaModul: 'Jom Baca Cerita' }
+    ];
+
+    let adaData = false;
+
+    kunciModul.forEach(m => {
+      const dataStr = localStorage.getItem(m.key);
+      if(dataStr) {
+        adaData = true;
+        const data = JSON.parse(dataStr);
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td style="border:1px solid #cce0bd; padding:12px;"><strong>${m.namaModul}</strong></td>
+          <td style="border:1px solid #cce0bd; padding:12px;">${escapeHtml(data.murid)}</td>
+          <td style="border:1px solid #cce0bd; padding:12px;">${escapeHtml(data.guru)}</td>
+          <td style="border:1px solid #cce0bd; padding:12px;">${escapeHtml(data.status)}</td>
+          <td style="border:1px solid #cce0bd; padding:12px;">${escapeHtml(data.masa)}</td>
+          <td style="border:1px solid #cce0bd; padding:12px; text-align:center;">
+            <button onclick="padamSatuRekod('${m.key}')" class="btn-danger" style="padding:6px 10px; font-size:13px;">Padam</button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      }
+    });
+
+    if(adaData) {
+      divTiada.classList.add('hidden');
+    } else {
+      divTiada.classList.remove('hidden');
+    }
+  }
+
+  function padamSatuRekod(key) {
+    if(confirm("Adakah anda pasti mahu memadam rekod ini?")) {
+      localStorage.removeItem(key);
+      muatSenaraiRekod();
+      if(key === 'rekod_guru_Ayat') document.getElementById('paparanRekodAyat').classList.add('hidden');
+      if(key === 'rekod_guru_Cerita') document.getElementById('paparanRekodCerita').classList.add('hidden');
+    }
+  }
+
+  document.getElementById('padamSemuaBtn').addEventListener('click', () => {
+    if(confirm("Adakah anda pasti mahu memadam semua rekod?")) {
+      localStorage.removeItem('rekod_guru_Ayat');
+      localStorage.removeItem('rekod_guru_Cerita');
+      muatSenaraiRekod();
+      document.getElementById('paparanRekodAyat').classList.add('hidden');
+      document.getElementById('paparanRekodCerita').classList.add('hidden');
+    }
+  });
+
+  function escapeHtml(str) {
+    return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+  }
+
+  // Logik Rekod Guru
+  function setupTeacherLog(sectionKey) {
+    const btnSimpan = document.getElementById(`simpanRekod${sectionKey}`);
+    const inputMurid = document.getElementById(`namaMurid${sectionKey}`);
+    const inputGuru = document.getElementById(`namaGuru${sectionKey}`);
+    const selectStatus = document.getElementById(`statusSemakan${sectionKey}`);
+    const boxPaparan = document.getElementById(`paparanRekod${sectionKey}`);
+
+    const savedData = localStorage.getItem(`rekod_guru_${sectionKey}`);
+    if(savedData) {
+      const data = JSON.parse(savedData);
+      boxPaparan.innerHTML = `<strong>✔ Rekod Disimpan Automatik:</strong><br>Murid: ${data.murid}<br>Guru: ${data.guru}<br>Status: ${data.status}<br>Tarikh/Masa: ${data.masa}`;
+      boxPaparan.classList.remove('hidden');
+    }
+
+    btnSimpan.addEventListener('click', () => {
+      const murid = inputMurid.value.trim() || "Tanpa Nama";
+      const guru = inputGuru.value.trim() || "Belum diisi";
+      const status = selectStatus.value;
+      const masa = new Date().toLocaleString('ms-MY');
+
+      const dataRecord = { murid, guru, status, masa };
+      localStorage.setItem(`rekod_guru_${sectionKey}`, JSON.stringify(dataRecord));
+
+      boxPaparan.innerHTML = `<strong>✔ Berjaya Disimpan!</strong><br>Murid: ${murid}<br>Guru: ${guru}<br>Status: ${status}<br>Tarikh/Masa: ${masa}`;
+      boxPaparan.classList.remove('hidden');
+      alert("Rekod dan semakan guru telah berjaya disimpan!");
+    });
+  }
+
+  setupTeacherLog('Ayat');
+  setupTeacherLog('Cerita');
+</script>
+</body>
+</html>
